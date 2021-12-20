@@ -1,7 +1,7 @@
 # ContactsDB-CRUD-using-SpringBoot
 I designed a simple CRUD web app using spring boot, that can be used for storing contacts &amp; remarks about them. I used MySql as the database, JPA, Thymeleaf for the view part.
 
-#User Images:
+# User Images:
 
 1) Initial page
 ![image](https://user-images.githubusercontent.com/86615017/146813138-f9f224f0-0153-4ebe-8a7b-7b3565ccbed5.png)
