@@ -1,0 +1,49 @@
+<html xmlns:th="https://thymeleaf.org">    
+
+<head>
+	<meta charset="UTF-8">
+	
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+	<title>ContactsDB - Add new contact</title>
+</head>
+    
+<body>
+	
+	<div class="container">
+		<div class="jumbotron">
+		  <h1 th:text = "${text.text}">Update Contact...</h1>
+		  <p>Add a new contact by typing in the details & clicking save</p>
+		</div>
+	</div>	
+		
+	<div class="container">
+		<form action="#" th:action="@{/save}" th:object="${crudItem}" method="post">
+		
+			<div class="form-group">
+		        <input type="hidden" th:field="*{id}">
+		    </div>
+		    
+		    <div class="form-group">
+		        <label for="contactName" class="control-label">Contact Name</label>
+		        <input type="text" th:field="*{contactName}" class="form-control" placeholder="Contact name">
+		    </div>
+		    
+		    <div class="form-group">
+		        <label for="phone" class="control-label">Phone Number</label>
+		        <input type="text" th:field="*{phone}" class="form-control" placeholder="Phone Number">
+		    </div>
+		    
+		    <div class="form-group">
+		        <label for="remarks" class="control-label">Remarks</label>
+		        <input type="text" th:field="*{remarks}" class="form-control" placeholder="Remarks">
+		    </div>
+		    
+		    <button type="submit" class="btn btn-primary">Save</button>
+		</form>
+	</div>	
+		
+</body>
+</html>
